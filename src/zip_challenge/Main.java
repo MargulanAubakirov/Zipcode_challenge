@@ -35,5 +35,28 @@ public class Main {
 
         }
 
+        System.out.println("_________________");
+
+        List<ZipCodeRange> input3 = new ArrayList<>();
+        input3.add(new ZipCodeRange(49679, 52015));
+        input3.add(new ZipCodeRange(49800, 50000));
+        input3.add(new ZipCodeRange(51500, 53479));
+        input3.add(new ZipCodeRange(51500, 53479));
+        input3.add(new ZipCodeRange(45012, 46937));
+        input3.add(new ZipCodeRange(54012, 59607));
+        input3.add(new ZipCodeRange(45500, 45590));
+        input3.add(new ZipCodeRange(45999, 47900));
+        input3.add(new ZipCodeRange(44000, 45000));
+        input3.add(new ZipCodeRange(43012, 45950));
+
+
+        List<ZipCodeRange> output3 = mergeRanges(input3);
+
+        for (ZipCodeRange result : output3) {
+            System.out.println("[" + result.start + "," + result.end + "]");
+
+
+        }
+
     }
 }
