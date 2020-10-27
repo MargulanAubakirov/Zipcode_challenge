@@ -1,30 +1,39 @@
-package com.company;
+package zip_challenge;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+
+import static zip_challenge.ZipCodeRangeSeries.mergeRanges;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        Range rangeOne = new Range(94133, 94133);
-        Range rangeTwo = new Range(94200, 94299);
-        Range rangeThree = new Range(94600, 94699);
 
-        // Call the generateMinimumRanges method on the ZipCodeRanges class
-        // Pass newly created range objects into the method
-        ZipCodeRanges.generateMinimumRanges(rangeOne);
-        ZipCodeRanges.generateMinimumRanges(rangeTwo);
-        ZipCodeRanges.generateMinimumRanges(rangeThree);
+        List<ZipCodeRange> input = new ArrayList<>();
+        input.add(new ZipCodeRange(94133, 94133));
+        input.add(new ZipCodeRange(94200, 94299));
+        input.add(new ZipCodeRange(94600, 94699));
 
-        // Call the printMinimumRanges method on the ZipCodeRanges class
-        ZipCodeRanges.printMinimumRanges();
+        List<ZipCodeRange> output = mergeRanges(input);
 
-        // Call the getMinimumRangeList method on the ZipCodeRanges class
-        // ZipCodeRanges.getMinimumRangeList();
+        for (ZipCodeRange result : output) {
+            System.out.println("[" + result.start + "," + result.end + "]");
+
+        }
+        System.out.println("_________________");
+
+        List<ZipCodeRange> input2 = new ArrayList<>();
+        input2.add(new ZipCodeRange(94133, 94133));
+        input2.add(new ZipCodeRange(94200, 94299));
+        input2.add(new ZipCodeRange(94226, 94399));
+
+        List<ZipCodeRange> output2 = mergeRanges(input2);
+
+        for (ZipCodeRange result : output2) {
+            System.out.println("[" + result.start + "," + result.end + "]");
 
 
+        }
 
     }
 }

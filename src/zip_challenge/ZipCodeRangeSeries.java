@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ZipCodeRange {
-    public static List<Range> mergeRanges(List<Range> ranges) {
+public class ZipCodeRangeSeries {
+    public static List<ZipCodeRange> mergeRanges(List<ZipCodeRange> ranges) {
 
-        List<Range> output = new ArrayList<>();
+        List<ZipCodeRange> output = new ArrayList<>();
 
-        //Sort the range by start attribute
+        //Sort the range by start index
         Collections.sort(ranges, (a, b) -> Integer.compare(a.start, b.start));
 
-        //Take range present at 0th element
-        Range temp = ranges.get(0);
+        //Retrieve range present at 0th element
+        ZipCodeRange temp = ranges.get(0);
         int start = temp.start;
         int end = temp.end;
 
@@ -25,16 +25,15 @@ public class ZipCodeRange {
             if (temp.start <= end) {
                 end = Math.max(end, temp.end);
             } else {
-                output.add(new Range(start, end));
+                output.add(new ZipCodeRange(start, end));
                 start = temp.start;
                 end = temp.end;
             }
         }
 
-        output.add(new Range(start, end));
+        output.add(new ZipCodeRange(start, end));
         return output;
     }
-
 
 }
 
