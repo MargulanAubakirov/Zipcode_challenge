@@ -1,11 +1,11 @@
 /**
- * Class: 	ZipCodeRange
- *  Range of restricted ZipCodes
- * 	start:	Zip Code start range (inclusive).
- * 	end:	Zip Code end range (inclusive).
+ *Class: ZipCodeRange
+ *Range of restricted ZipCodes
+ *start:Zip Code start range (inclusive).
+ *end:Zip Code end range (inclusive).
  */
 
-package zip_challenge;
+package zipchallenge;
 
 public class ZipCodeRange {
     int start; //lower bound

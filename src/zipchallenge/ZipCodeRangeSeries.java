@@ -1,4 +1,4 @@
-package zip_challenge;
+package zipchallenge;
 
 import java.util.ArrayList;
 import java.util.Collections;

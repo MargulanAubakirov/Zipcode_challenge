@@ -1,9 +1,9 @@
-package zip_challenge;
+package zipchallenge;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static zip_challenge.ZipCodeRangeSeries.mergeRanges;
+import static zipchallenge.ZipCodeRangeSeries.mergeRanges;
 
 public class Main {
 
